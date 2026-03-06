@@ -1,10 +1,10 @@
 package com.back.question;
 
 import java.util.List;
-
-import org.springframework.stereotype.Service;
-
+import java.util.Optional;
+import com.back.DataNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
 @Service
@@ -14,5 +14,14 @@ public class QuestionService {
 
     public List<Question> getList() {
         return this.questionRepository.findAll();
+    }
+
+    public Question getQuestion(Integer id) {
+        Optional<Question> question = this.questionRepository.findById(id);
+        if (question.isPresent()) {
+            return question.get();
+        } else {
+            throw new DataNotFoundException("question not found");
+        }
     }
 }
