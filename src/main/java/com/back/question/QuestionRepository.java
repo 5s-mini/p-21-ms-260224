@@ -1,6 +1,5 @@
-package com.back.question.repository;
+package com.back.question;
 
-import com.back.question.entity.Question;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface QuestionRepository extends JpaRepository<Question, Integer> {

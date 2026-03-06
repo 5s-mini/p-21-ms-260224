@@ -3,9 +3,9 @@ package com.back;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import com.back.answer.entity.Answer;
-import com.back.question.entity.Question;
-import com.back.question.repository.QuestionRepository;
+import com.back.answer.Answer;
+import com.back.question.Question;
+import com.back.question.QuestionRepository;
 import java.util.List;
 import java.util.Optional;
 import org.junit.jupiter.api.Test;
